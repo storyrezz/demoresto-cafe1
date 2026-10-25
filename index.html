@@ -1,0 +1,1692 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KESAN Cafe & Resto | Nikmati Rasa, Ciptakan Kesan</title>
+    
+    <!-- Meta SEO Dasar -->
+    <meta name="description" content="KESAN Cafe & Resto - Affordable Price, Luxurious Taste. Tempat kuliner dengan hidangan lezat, suasana hangat, live music, karaoke, dan reservasi acara grup.">
+    <meta name="keywords" content="KESAN Cafe, Resto, Kuliner, Live Music, Karaoke, Reservasi Acara, Tempat Nongkrong">
+    <meta property="og:title" content="KESAN Cafe & Resto | Affordable Price, Luxurious Taste">
+    <meta property="og:description" content="Tempat bertemu, menikmati rasa, dan menciptakan kesan berharga bersama keluarga & sahabat.">
+    <meta property="og:type" content="website">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        mustard: {
+                            DEFAULT: '#C38B1A',
+                            hover: '#A67312',
+                            light: '#FAF3E5',
+                        },
+                        coffee: {
+                            DEFAULT: '#4C2611',
+                            dark: '#2E1609',
+                            light: '#6E3A1C'
+                        },
+                        warmbg: '#F7F1E7',
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'Georgia', 'serif'],
+                        sans: ['Inter', 'Plus Jakarta Sans', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* Custom Styles & Animation Helpers */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #F7F1E7;
+            color: #2E1609;
+        }
+        
+        h1, h2, h3, .font-heading {
+            font-family: 'Playfair Display', serif;
+        }
+
+        /* Glassmorphism Navigation */
+        .nav-glass {
+            background: rgba(46, 22, 9, 0.92);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #2E1609;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #C38B1A;
+            border-radius: 4px;
+        }
+
+        /* Smooth Image Hover Effect */
+        .img-zoom-container {
+            overflow: hidden;
+        }
+        .img-zoom {
+            transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+        }
+        .img-zoom-container:hover .img-zoom {
+            transform: scale(1.08);
+        }
+
+        /* Modal & Lightbox Overlay */
+        .modal-active {
+            display: flex !important;
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-mustard selection:text-white">
+
+    <!-- ================= 1. HEADER & NAVBAR ================= -->
+    <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 nav-glass text-white border-b border-mustard/20" id="mainHeader">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                
+                <!-- Brand Logo / Name -->
+                <a href="#" class="flex items-center space-x-3 group">
+                    <div class="w-10 h-10 rounded-full border-2 border-mustard flex items-center justify-center bg-coffee-dark group-hover:border-white transition-colors">
+                        <span class="font-serif font-bold text-lg text-mustard group-hover:text-white">K</span>
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="font-serif text-2xl font-bold tracking-wider text-white">KESAN</span>
+                        <span class="text-[9px] tracking-widest text-mustard uppercase -mt-1 font-sans">Cafe & Resto</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden md:flex items-center space-x-8 text-sm font-medium">
+                    <a href="#beranda" class="hover:text-mustard transition-colors py-1 border-b-2 border-transparent hover:border-mustard">Beranda</a>
+                    <a href="#tentang" class="hover:text-mustard transition-colors py-1 border-b-2 border-transparent hover:border-mustard">Tentang Kami</a>
+                    <a href="#menu" class="hover:text-mustard transition-colors py-1 border-b-2 border-transparent hover:border-mustard">Menu</a>
+                    <a href="#fasilitas" class="hover:text-mustard transition-colors py-1 border-b-2 border-transparent hover:border-mustard">Fasilitas</a>
+                    <a href="#galeri" class="hover:text-mustard transition-colors py-1 border-b-2 border-transparent hover:border-mustard">Galeri</a>
+                    <a href="#faq" class="hover:text-mustard transition-colors py-1 border-b-2 border-transparent hover:border-mustard">FAQ</a>
+                    <a href="#kontak" class="hover:text-mustard transition-colors py-1 border-b-2 border-transparent hover:border-mustard">Kontak</a>
+                </nav>
+
+                <!-- Header CTA Button -->
+                <div class="hidden lg:flex items-center">
+                    <a href="#reservasi" class="bg-mustard hover:bg-mustard-hover text-white px-5 py-2.5 rounded-full font-medium text-sm transition-all transform hover:-translate-y-0.5 shadow-lg shadow-mustard/20 flex items-center gap-2">
+                        <i class="fa-regular fa-calendar-check text-xs"></i>
+                        <span>Reservasi Sekarang</span>
+                    </a>
+                </div>
+
+                <!-- Mobile Hamburger Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobileMenuBtn" class="text-white hover:text-mustard focus:outline-none p-2" aria-label="Buka Menu Mobile">
+                        <i class="fa-solid fa-bars text-2xl" id="menuIcon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Drawer Navigation -->
+        <div id="mobileMenu" class="hidden md:hidden bg-coffee-dark border-b border-mustard/20 px-4 pt-2 pb-6 space-y-3">
+            <a href="#beranda" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-coffee hover:text-mustard">Beranda</a>
+            <a href="#tentang" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-coffee hover:text-mustard">Tentang Kami</a>
+            <a href="#menu" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-coffee hover:text-mustard">Menu</a>
+            <a href="#fasilitas" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-coffee hover:text-mustard">Fasilitas</a>
+            <a href="#galeri" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-coffee hover:text-mustard">Galeri</a>
+            <a href="#faq" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-coffee hover:text-mustard">FAQ</a>
+            <a href="#kontak" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-coffee hover:text-mustard">Kontak</a>
+            <div class="pt-2">
+                <a href="#reservasi" class="mobile-link block w-full text-center bg-mustard hover:bg-mustard-hover text-white px-4 py-3 rounded-xl font-medium shadow">
+                    Reservasi Sekarang
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- ================= 2. HERO SECTION ================= -->
+    <section id="beranda" class="relative min-h-screen flex items-center justify-center pt-20 bg-coffee-dark text-white overflow-hidden">
+        <!-- Hero Background Image Overlay -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1920&q=80" 
+                 alt="Suasana Cafe KESAN" 
+                 class="w-full h-full object-cover opacity-35"
+                 onerror="this.src='https://placehold.co/1920x1080/4C2611/FFFFFF?text=KESAN+Cafe+Resto'">
+            <div class="absolute inset-0 bg-gradient-to-t from-coffee-dark via-coffee-dark/60 to-transparent"></div>
+        </div>
+
+        <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center py-20">
+            <!-- Badge Subtitle -->
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-mustard/40 bg-mustard/10 backdrop-blur-md mb-6">
+                <i class="fa-solid fa-star text-mustard text-xs"></i>
+                <span class="text-xs uppercase tracking-widest text-mustard font-semibold">Good Food • Great Moments • Lasting Memories</span>
+            </div>
+
+            <!-- Title & Tagline -->
+            <h1 class="text-4xl sm:text-6xl md:text-7xl font-serif font-bold tracking-tight leading-tight mb-4">
+                KESAN <span class="text-mustard italic font-normal">Cafe & Resto</span>
+            </h1>
+            <p class="text-xl sm:text-2xl font-serif italic text-amber-100/90 mb-6 font-light">
+                “Tempat Bertemu, Menikmati Rasa, Menciptakan Kesan.”
+            </p>
+            <p class="max-w-2xl mx-auto text-base sm:text-lg text-gray-300 font-sans leading-relaxed mb-10">
+                Nikmati hidangan lezat berkelas, suasana hangat yang nyaman, dan hiburan live music menyenangkan—semua dengan harga terjangkau.
+            </p>
+
+            <!-- CTA Buttons -->
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
+                <a href="#menu" class="w-full sm:w-auto px-8 py-4 bg-mustard hover:bg-mustard-hover text-white rounded-full font-semibold transition-all duration-300 shadow-xl shadow-mustard/20 hover:-translate-y-0.5 flex items-center justify-center gap-3">
+                    <span>Jelajahi Menu</span>
+                    <i class="fa-solid fa-utensils text-sm"></i>
+                </a>
+                <a href="#reservasi" class="w-full sm:w-auto px-8 py-4 border-2 border-white/80 hover:border-mustard hover:text-mustard text-white rounded-full font-semibold transition-all duration-300 backdrop-blur-sm flex items-center justify-center gap-3">
+                    <span>Reservasi Sekarang</span>
+                    <i class="fa-solid fa-arrow-right text-sm"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- Decorative Bottom Wave -->
+        <div class="absolute bottom-0 left-0 right-0 h-12 bg-gradient-to-t from-warmbg to-transparent z-10"></div>
+    </section>
+
+    <!-- ================= 3. TENTANG KAMI ================= -->
+    <section id="tentang" class="py-20 bg-warmbg relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left Image Grid Composition -->
+                <div class="lg:col-span-6 relative">
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="space-y-4">
+                            <div class="img-zoom-container rounded-2xl shadow-lg h-64">
+                                <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=800&q=80" 
+                                     alt="Interior Cafe KESAN" 
+                                     class="w-full h-full object-cover img-zoom"
+                                     onerror="this.src='https://placehold.co/800x800/4C2611/FFFFFF?text=Interior+Cafe'">
+                            </div>
+                            <div class="bg-coffee text-white p-6 rounded-2xl shadow-md border-l-4 border-mustard">
+                                <p class="text-3xl font-serif font-bold text-mustard">100%</p>
+                                <p class="text-xs text-gray-300 uppercase tracking-wider mt-1">Bahan Segar & Halal</p>
+                            </div>
+                        </div>
+                        <div class="space-y-4 pt-8">
+                            <div class="bg-mustard text-white p-6 rounded-2xl shadow-md">
+                                <p class="text-sm italic font-serif">"Affordable Price, Luxurious Taste."</p>
+                            </div>
+                            <div class="img-zoom-container rounded-2xl shadow-lg h-64">
+                                <img src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&w=800&q=80" 
+                                     alt="Pengunjung Berbagi Cerita" 
+                                     class="w-full h-full object-cover img-zoom"
+                                     onerror="this.src='https://placehold.co/800x800/C38B1A/FFFFFF?text=Suasana+Hangat'">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Narrative Content -->
+                <div class="lg:col-span-6 space-y-6">
+                    <div class="inline-block px-3 py-1 rounded-md bg-mustard/10 border border-mustard/30 text-mustard text-xs font-semibold uppercase tracking-widest">
+                        Tentang KESAN
+                    </div>
+                    <h2 class="text-3xl sm:text-4xl font-serif font-bold text-coffee-dark leading-tight">
+                        Lebih dari Sekadar Tempat Makan
+                    </h2>
+                    <p class="text-gray-700 leading-relaxed font-sans">
+                        KESAN Cafe & Resto hadir sebagai tempat untuk menikmati hidangan, berbagi cerita, dan menciptakan momen berharga. Dengan suasana nyaman, pelayanan ramah, serta pilihan menu yang menarik, KESAN menjadi pilihan favorit untuk berkumpul bersama keluarga, teman, maupun komunitas.
+                    </p>
+
+                    <!-- 3 Pillars Value List -->
+                    <div class="space-y-4 pt-2">
+                        <div class="flex items-start gap-4 p-3 rounded-xl hover:bg-white/60 transition-colors">
+                            <div class="w-10 h-10 rounded-full bg-mustard/20 text-mustard flex items-center justify-center shrink-0 mt-1">
+                                <i class="fa-solid fa-utensils"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-serif font-bold text-coffee-dark">Hidangan Berkualitas</h4>
+                                <p class="text-sm text-gray-600">Disajikan dari bahan pilihan berstandar tinggi dengan cita rasa otentik yang memanjakan lidah.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4 p-3 rounded-xl hover:bg-white/60 transition-colors">
+                            <div class="w-10 h-10 rounded-full bg-mustard/20 text-mustard flex items-center justify-center shrink-0 mt-1">
+                                <i class="fa-solid fa-couch"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-serif font-bold text-coffee-dark">Suasana Nyaman</h4>
+                                <p class="text-sm text-gray-600">Desain interior yang hangat dan elegan, sangat ideal untuk bersantai maupun produktif.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4 p-3 rounded-xl hover:bg-white/60 transition-colors">
+                            <div class="w-10 h-10 rounded-full bg-mustard/20 text-mustard flex items-center justify-center shrink-0 mt-1">
+                                <i class="fa-solid fa-heart"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-serif font-bold text-coffee-dark">Momen Penuh Kesan</h4>
+                                <p class="text-sm text-gray-600">Layanan ramah dan hiburan spesial yang menjadikan setiap kunjungan Anda berkesan.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= 4. MENU UNGGULAN ================= -->
+    <section id="menu" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="text-xs font-semibold uppercase tracking-widest text-mustard bg-mustard/10 px-3 py-1 rounded-md border border-mustard/20">
+                    Menu Pilihan
+                </span>
+                <h2 class="text-3xl sm:text-4xl font-serif font-bold text-coffee-dark mt-3 mb-4">Temukan Favoritmu</h2>
+                <p class="text-gray-600 text-sm sm:text-base">
+                    Nikmati kelezatan menu racikan koki profesional KESAN dengan rasa mewah dan harga terjangkau.
+                </p>
+                <div class="mt-2 text-xs text-amber-700 bg-amber-50 inline-block px-3 py-1 rounded border border-amber-200 italic">
+                    *Catatan: Klik tombol di bawah untuk membuka katalog lengkap semua varian makanan & minuman.
+                </div>
+            </div>
+
+            <!-- Menu Grid Utama -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Menu Item 1 -->
+                <div class="bg-warmbg rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-coffee/5 group flex flex-col justify-between">
+                    <div>
+                        <div class="img-zoom-container relative h-52">
+                            <img src="https://images.unsplash.com/photo-1603133872878-684f208fb84b?auto=format&fit=crop&w=800&q=80" 
+                                 alt="Nasi Goreng Spesial" 
+                                 class="w-full h-full object-cover img-zoom"
+                                 onerror="this.src='https://placehold.co/800x600/4C2611/FFFFFF?text=Nasi+Goreng'">
+                            <span class="absolute top-3 right-3 bg-mustard text-white text-xs font-bold px-3 py-1 rounded-full shadow">Bestseller</span>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-start mb-2">
+                                <h3 class="font-serif font-bold text-xl text-coffee-dark group-hover:text-mustard transition-colors">Nasi Goreng Spesial</h3>
+                            </div>
+                            <p class="text-gray-600 text-sm mb-4 leading-relaxed">
+                                Nasi goreng gurih dengan bumbu rempah rahasia, disajikan lengkap dengan telur, ayam suwir, krupuk, dan acar.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6 pt-0 flex justify-between items-center border-t border-coffee/10 mt-auto">
+                        <span class="text-lg font-bold text-coffee">Rp28.000</span>
+                        <a href="#reservasi" class="text-xs text-mustard hover:text-coffee font-semibold flex items-center gap-1">
+                            Pesan <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Menu Item 2 -->
+                <div class="bg-warmbg rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-coffee/5 group flex flex-col justify-between">
+                    <div>
+                        <div class="img-zoom-container relative h-52">
+                            <img src="https://images.unsplash.com/photo-1598515214211-89d3c73ae83b?auto=format&fit=crop&w=800&q=80" 
+                                 alt="Ayam Bakar KESAN" 
+                                 class="w-full h-full object-cover img-zoom"
+                                 onerror="this.src='https://placehold.co/800x600/4C2611/FFFFFF?text=Ayam+Bakar'">
+                            <span class="absolute top-3 right-3 bg-coffee text-white text-xs font-bold px-3 py-1 rounded-full shadow">Signature</span>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-start mb-2">
+                                <h3 class="font-serif font-bold text-xl text-coffee-dark group-hover:text-mustard transition-colors">Ayam Bakar KESAN</h3>
+                            </div>
+                            <p class="text-gray-600 text-sm mb-4 leading-relaxed">
+                                Ayam pilihan dibakar karamel manis gurih dengan kecap rempah KESAN, disajikan dengan sambal terasi khas.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6 pt-0 flex justify-between items-center border-t border-coffee/10 mt-auto">
+                        <span class="text-lg font-bold text-coffee">Rp32.000</span>
+                        <a href="#reservasi" class="text-xs text-mustard hover:text-coffee font-semibold flex items-center gap-1">
+                            Pesan <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Menu Item 3 -->
+                <div class="bg-warmbg rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-coffee/5 group flex flex-col justify-between">
+                    <div>
+                        <div class="img-zoom-container relative h-52">
+                            <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=80" 
+                                 alt="Chicken Steak" 
+                                 class="w-full h-full object-cover img-zoom"
+                                 onerror="this.src='https://placehold.co/800x600/4C2611/FFFFFF?text=Chicken+Steak'">
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-start mb-2">
+                                <h3 class="font-serif font-bold text-xl text-coffee-dark group-hover:text-mustard transition-colors">Chicken Steak</h3>
+                            </div>
+                            <p class="text-gray-600 text-sm mb-4 leading-relaxed">
+                                Dada ayam krispi juicy dipadukan saus blackpepper lezat, kentang goreng renyah, dan tumis sayur segar.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6 pt-0 flex justify-between items-center border-t border-coffee/10 mt-auto">
+                        <span class="text-lg font-bold text-coffee">Rp35.000</span>
+                        <a href="#reservasi" class="text-xs text-mustard hover:text-coffee font-semibold flex items-center gap-1">
+                            Pesan <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Menu Item 4 -->
+                <div class="bg-warmbg rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-coffee/5 group flex flex-col justify-between">
+                    <div>
+                        <div class="img-zoom-container relative h-52">
+                            <img src="https://images.unsplash.com/photo-1612927601601-6638404737ce?auto=format&fit=crop&w=800&q=80" 
+                                 alt="Mie Goreng Signature" 
+                                 class="w-full h-full object-cover img-zoom"
+                                 onerror="this.src='https://placehold.co/800x600/4C2611/FFFFFF?text=Mie+Goreng'">
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-start mb-2">
+                                <h3 class="font-serif font-bold text-xl text-coffee-dark group-hover:text-mustard transition-colors">Mie Goreng Signature</h3>
+                            </div>
+                            <p class="text-gray-600 text-sm mb-4 leading-relaxed">
+                                Mie kenyal ditumis dengan bumbu khas Jawa, bakso, potongan ayam, dan sayuran organik pilihan.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6 pt-0 flex justify-between items-center border-t border-coffee/10 mt-auto">
+                        <span class="text-lg font-bold text-coffee">Rp25.000</span>
+                        <a href="#reservasi" class="text-xs text-mustard hover:text-coffee font-semibold flex items-center gap-1">
+                            Pesan <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Menu Item 5 -->
+                <div class="bg-warmbg rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-coffee/5 group flex flex-col justify-between">
+                    <div>
+                        <div class="img-zoom-container relative h-52">
+                            <img src="https://images.unsplash.com/photo-1517701604599-bb29b565090c?auto=format&fit=crop&w=800&q=80" 
+                                 alt="Es Kopi Susu KESAN" 
+                                 class="w-full h-full object-cover img-zoom"
+                                 onerror="this.src='https://placehold.co/800x600/4C2611/FFFFFF?text=Es+Kopi+Susu'">
+                            <span class="absolute top-3 right-3 bg-mustard text-white text-xs font-bold px-3 py-1 rounded-full shadow">Favorit</span>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-start mb-2">
+                                <h3 class="font-serif font-bold text-xl text-coffee-dark group-hover:text-mustard transition-colors">Es Kopi Susu KESAN</h3>
+                            </div>
+                            <p class="text-gray-600 text-sm mb-4 leading-relaxed">
+                                Espresso espresso blend house-roasted dipadu dengan gula aren murni dan susu creamy yang pas.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6 pt-0 flex justify-between items-center border-t border-coffee/10 mt-auto">
+                        <span class="text-lg font-bold text-coffee">Rp20.000</span>
+                        <a href="#reservasi" class="text-xs text-mustard hover:text-coffee font-semibold flex items-center gap-1">
+                            Pesan <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Menu Item 6 -->
+                <div class="bg-warmbg rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-coffee/5 group flex flex-col justify-between">
+                    <div>
+                        <div class="img-zoom-container relative h-52">
+                            <img src="https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=800&q=80" 
+                                 alt="Chocolate Latte" 
+                                 class="w-full h-full object-cover img-zoom"
+                                 onerror="this.src='https://placehold.co/800x600/4C2611/FFFFFF?text=Chocolate+Latte'">
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-start mb-2">
+                                <h3 class="font-serif font-bold text-xl text-coffee-dark group-hover:text-mustard transition-colors">Chocolate Latte</h3>
+                            </div>
+                            <p class="text-gray-600 text-sm mb-4 leading-relaxed">
+                                Cokelat premium pekat disajikan hangat atau dingin dengan foam susu halus yang memanjakan.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6 pt-0 flex justify-between items-center border-t border-coffee/10 mt-auto">
+                        <span class="text-lg font-bold text-coffee">Rp22.000</span>
+                        <a href="#reservasi" class="text-xs text-mustard hover:text-coffee font-semibold flex items-center gap-1">
+                            Pesan <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- View All Menu Action Button -->
+            <div class="text-center mt-12">
+                <button onclick="openMenuModal()" class="px-8 py-4 bg-mustard hover:bg-mustard-hover text-white rounded-full font-bold transition-all transform hover:-translate-y-1 shadow-xl shadow-mustard/20 inline-flex items-center gap-3 text-base">
+                    <i class="fa-solid fa-book-open text-base"></i>
+                    <span>Lihat Semua Menu & Varian (Katalog Lengkap)</span>
+                </button>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ================= MODAL FULL KATALOG MENU ================= -->
+    <div id="fullMenuModal" class="fixed inset-0 z-50 bg-black/80 hidden items-center justify-center p-3 sm:p-6" onclick="closeMenuModal()">
+        <div class="bg-warmbg w-full max-w-5xl max-h-[90vh] rounded-3xl shadow-2xl overflow-hidden flex flex-col" onclick="event.stopPropagation()">
+            
+            <!-- Modal Header -->
+            <div class="bg-coffee-dark text-white p-5 sm:p-6 flex justify-between items-center border-b border-mustard/30 shrink-0">
+                <div class="flex items-center gap-3">
+                    <div class="w-9 h-9 rounded-full bg-mustard flex items-center justify-center text-white font-serif font-bold">K</div>
+                    <div>
+                        <h3 class="font-serif font-bold text-xl sm:text-2xl text-white">Katalog Menu & Varian KESAN</h3>
+                        <p class="text-xs text-mustard font-sans">Affordable Price, Luxurious Taste</p>
+                    </div>
+                </div>
+                <button onclick="closeMenuModal()" class="text-gray-300 hover:text-white p-2 text-2xl focus:outline-none transition-colors">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <!-- Modal Category Filter Tabs -->
+            <div class="bg-white border-b border-coffee/10 px-4 py-3 shrink-0 overflow-x-auto">
+                <div class="flex space-x-2 sm:space-x-4 min-w-max">
+                    <button onclick="filterMenuCategory('all', this)" class="menu-tab-btn active px-4 py-2 rounded-full text-xs sm:text-sm font-semibold transition-all bg-mustard text-white">
+                        Semua Menu
+                    </button>
+                    <button onclick="filterMenuCategory('makanan', this)" class="menu-tab-btn px-4 py-2 rounded-full text-xs sm:text-sm font-semibold transition-all bg-coffee/5 text-coffee-dark hover:bg-mustard/20">
+                        <i class="fa-solid fa-bowl-rice mr-1"></i> Makanan Utama
+                    </button>
+                    <button onclick="filterMenuCategory('camilan', this)" class="menu-tab-btn px-4 py-2 rounded-full text-xs sm:text-sm font-semibold transition-all bg-coffee/5 text-coffee-dark hover:bg-mustard/20">
+                        <i class="fa-solid fa-burger mr-1"></i> Camilan & Snack
+                    </button>
+                    <button onclick="filterMenuCategory('kopi', this)" class="menu-tab-btn px-4 py-2 rounded-full text-xs sm:text-sm font-semibold transition-all bg-coffee/5 text-coffee-dark hover:bg-mustard/20">
+                        <i class="fa-solid fa-mug-hot mr-1"></i> Aneka Kopi
+                    </button>
+                    <button onclick="filterMenuCategory('nonkopi', this)" class="menu-tab-btn px-4 py-2 rounded-full text-xs sm:text-sm font-semibold transition-all bg-coffee/5 text-coffee-dark hover:bg-mustard/20">
+                        <i class="fa-solid fa-glass-water mr-1"></i> Non-Kopi & Segar
+                    </button>
+                    <button onclick="filterMenuCategory('dessert', this)" class="menu-tab-btn px-4 py-2 rounded-full text-xs sm:text-sm font-semibold transition-all bg-coffee/5 text-coffee-dark hover:bg-mustard/20">
+                        <i class="fa-solid fa-ice-cream mr-1"></i> Dessert & Penutup
+                    </button>
+                </div>
+            </div>
+
+            <!-- Modal Content (Grid Items Scrollable) -->
+            <div class="p-4 sm:p-6 overflow-y-auto grow">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="modalMenuGrid">
+                    
+                    <!-- MAKANAN UTAMA -->
+                    <div class="menu-item-card makanan bg-white rounded-2xl p-4 border border-coffee/10 shadow-sm hover:shadow-md transition-all flex gap-4 items-center">
+                        <img src="https://images.unsplash.com/photo-1603133872878-684f208fb84b?auto=format&fit=crop&w=300&q=80" class="w-20 h-20 rounded-xl object-cover shrink-0" alt="Nasi Goreng Spesial">
+                        <div class="grow">
+                            <span class="text-[10px] font-bold uppercase tracking-widest text-mustard">Makanan</span>
+                            <h4 class="font-serif font-bold text-base text-coffee-dark">Nasi Goreng Spesial</h4>
+                            <p class="text-xs text-gray-500 line-clamp-2 mt-0.5">Nasi goreng rempah khas KESAN dengan telur & ayam suwir.</p>
+                            <p class="text-sm font-bold text-coffee mt-1">Rp 28.000</p>
+                        </div>
+                    </div>
+
+                    <div class="menu-item-card makanan bg-white rounded-2xl p-4 border border-coffee/10 shadow-sm hover:shadow-md transition-all flex gap-4 items-center">
+                        <img src="https://images.unsplash.com/photo-1598515214211-89d3c73ae83b?auto=format&fit=crop&w=300&q=80" class="w-20 h-20 rounded-xl object-cover shrink-0" alt="Ayam Bakar KESAN">
+                        <div class="grow">
+                            <span class="text-[10px] font-bold uppercase tracking-widest text-mustard">Makanan</span>
+                            <h4 class="font-serif font-bold text-base text-coffee-dark">Ayam Bakar KESAN</h4>
+                            <p class="text-xs text-gray-500 line-clamp-2 mt-0.5">Ayam bumbu kecap rempah karamel manis gurih + sambal.</p>
+                            <p class="text-sm font-bold text-coffee mt-1">Rp 32.000</p>
+                        </div>
+                    </div>
+
+                    <div class="menu-item-card makanan bg-white rounded-2xl p-4 border border-coffee/10 shadow-sm hover:shadow-md transition-all flex gap-4 items-center">
+                        <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=300&q=80" class="w-20 h-20 rounded-xl object-cover shrink-0" alt="Chicken Steak">
+                        <div class="grow">
+                            <span class="text-[10px] font-bold uppercase tracking-widest text-mustard">Makanan</span>
+                            <h4 class="font-serif font-bold text-base text-coffee-dark">Chicken Steak Hotplate</h4>
+                            <p class="text-xs text-gray-500 line-clamp-2 mt-0.5">Dada ayam krispi juicy saus blackpepper & french fries.</p>
+                            <p class="text-sm font-bold text-coffee mt-1">Rp 35.000</p>
+                        </div>
+                    </div>
+
+                    <div class="menu-item-card makanan bg-white rounded-2xl p-4 border border-coffee/10 shadow-sm hover:shadow-md transition-all flex gap-4 items-center">
+                        <img src="https://images.unsplash.com/photo-1612927601601-6638404737ce?auto=format&fit=crop&w=300&q=80" class="w-20 h-20 rounded-xl object-cover shrink-0" alt="Mie Goreng Signature">
+                        <div class="grow">
+                            <span class="text-[10px] font-bold uppercase tracking-widest text-mustard">Makanan</span>
+                            <h4 class="font-serif font-bold text-base text-coffee-dark">Mie Goreng Jawa</h4>
+                            <p class="text-xs text-gray-500 line-clamp-2 mt-0.5">Mie kenyal tumis dengan bakso, ayam, dan sayur segar.</p>
+                            <p class="text-sm font-bold text-coffee mt-1">Rp 25.000</p>
+                        </div>
+                    </div>
+
+                    <div class="menu-item-card makanan bg-white rounded-2xl p-4 border border-coffee/10 shadow-sm hover:shadow-md transition-all flex gap-4 items-center">
+                        <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=300&q=80" class="w-20 h-20 rounded-xl object-cover shrink-0" alt="KESAN Beef Burger">
+                        <div class="grow">
+                            <span class="text-[10px] font-bold uppercase tracking-widest text-mustard">Makanan</span>
+                            <h4 class="font-serif font-bold text-base text-coffee-dark">KESAN Classic Beef Burger</h4>
+                            <p class="text-xs text-gray-500 line-clamp-2 mt-0.5">Patty daging sapi tebal, keju melt, dan saus spesial.</p>
+                            <p class="text-sm font-bold text-coffee mt-1">Rp 38.000</p>
+                        </div>
+                    </div>
+
+                    <div class="menu-item-card makanan bg-white rounded-2xl p-4 border border-coffee/10 shadow-sm hover:shadow-md transition-all flex gap-4 items-center">
+                        <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=300&q=80" class="w-20 h-20 rounded-xl object-cover shrink-0" alt="Spaghetti Bolognese">
+                        <div class="grow">
+                            <span class="text-[10px] font-bold uppercase tracking-widest text-mustard">Makanan</span>
+                            <h4 class="font-serif font-bold text-base text-coffee-dark">Spaghetti Bolognese</h4>
+                            <p class="text-xs text-gray-500 line-clamp-2 mt-0.5">Pasta al dente dengan saus daging cincang gurih & keju.</p>
+                            <p class="text-sm font-bold text-coffee mt-1">Rp 34.000</p>
+                        </div>
+                    </div>
+
+                    <div class="menu-item-card makanan bg-white rounded-2xl p-4 border border-coffee/10 shadow-sm hover:shadow-md transition-all flex gap-4 items-center">
+                        <img src="https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&w=300&q=80" class="w-20 h-20 rounded-xl object-cover shrink-0" alt="Rice Bowl Chicken Teriyaki">
+                        <div class="grow">
+                            <span class="text-[10px] font-bold uppercase tracking-widest text-mustard">Makanan</span>
+                            <h4 class="font-serif font-bold text-base text-coffee-dark">Rice Bowl Chicken Teriyaki</h4>
+                            <p class="text-xs text-gray-500 line-clamp-2 mt-0.5">Nasi hangat dengan potongan ayam saus teriyaki manis gurih.</p>
+                            <p class="text-sm font-bold text-coffee mt-1">Rp 29.000</p>
+                        </div>
+                    </div>
+
+                    <!-- CAMILAN / SNACK -->
+                    <div class="menu-item-card camilan bg-white rounded-2xl p-4 border border-coffee/10 shadow-sm hover:shadow-md transition-all flex gap-4 items-center">
+                        <img src="https://images.unsplash.com/photo-1576107232684-1279f390859f?auto=format&fit=crop&w=300&q=80" class="w-20 h-20 rounded-xl object-cover shrink-0" alt="French Fries Cheese">
+                        <div class="grow">
+                            <span class="text-[10px] font-bold uppercase tracking-widest text-mustard">Camilan</span>
+                            <h4 class="font-serif font-bold text-base text-coffee-dark">French Fries Cheese Melt</h4>
+                            <p class="text-xs text-gray-500 line-clamp-2 mt-0.5">Kentang renyah disiram saus keju gurih hangat.</p>
+                            <p class="text-sm font-bold text-coffee mt-1">Rp 18.000</p>
+                        </div>
+                    </div>
+
+                    <div class="menu-item-card camilan bg-white rounded-2xl p-4 border border-coffee/10 shadow-sm hover:shadow-md transition-all flex gap-4 items-center">
+                        <img src="https://images.unsplash.com/photo-1562967914-608f82629710?auto=format&fit=crop&w=300&q=80" class="w-20 h-20 rounded-xl object-cover shrink-0" alt="Mix Snack Platter">
+                        <div class="grow">
+                            <span class="text-[10px] font-bold uppercase tracking-widest text-mustard">Camilan</span>
+                            <h4 class="font-serif font-bold text-base text-coffee-dark">KESAN Mix Platter</h4>
+                            <p class="text-xs text-gray-500 line-clamp-2 mt-0.5">Kombinasi kentang, sosis, chicken nugget & onion rings.</p>
+                            <p class="text-sm font-bold text-coffee mt-1">Rp 35.000</p>
+                        </div>
+                    </div>
+
+                    <div class="menu-item-card camilan bg-white rounded-2xl p-4 border border-coffee/10 shadow-sm hover:shadow-md transition-all flex gap-4 items-center">
+                        <img src="https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=300&q=80" class="w-20 h-20 rounded-xl object-cover shrink-0" alt="Cireng Salju Sambal Rujak">
+                        <div class="grow">
+                            <span class="text-[10px] font-bold uppercase tracking-widest text-mustard">Camilan</span>
+                            <h4 class="font-serif font-bold text-base text-coffee-dark">Cireng Crispy Sambal Rujak</h4>
+                            <p class="text-xs text-gray-500 line-clamp-2 mt-0.5">Cireng renyah di luar kenyal di dalam dengan bumbu rujak pedas.</p>
+                            <p class="text-sm font-bold text-coffee mt-1">Rp 16.000</p>
+                        </div>
+                    </div>
+
+                    <div class="menu-item-card camilan bg-white rounded-2xl p-4 border border-coffee/10 shadow-sm hover:shadow-md transition-all flex gap-4 items-center">
+                        <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=300&q=80" class="w-20 h-20 rounded-xl object-cover shrink-0" alt="Roti Bakar Cokelat Keju">
+                        <div class="grow">
+                            <span class="text-[10px] font-bold uppercase tracking-widest text-mustard">Camilan</span>
+                            <h4 class="font-serif font-bold text-base text-coffee-dark">Roti Bakar Cokelat Keju</h4>
+                            <p class="text-xs text-gray-500 line-clamp-2 mt-0.5">Roti tebal panggang mantap dengan lumeran cokelat & parutan keju.</p>
+                            <p class="text-sm font-bold text-coffee mt-1">Rp 20.000</p>
+                        </div>
+                    </div>
+
+                    <!-- KOPI -->
+                    <div class="menu-item-card kopi bg-white rounded-2xl p-4 border border-coffee/10 shadow-sm hover:shadow-md transition-all flex gap-4 items-center">
+                        <img src="https://images.unsplash.com/photo-1517701604599-bb29b565090c?auto=format&fit=crop&w=300&q=80" class="w-20 h-20 rounded-xl object-cover shrink-0" alt="Es Kopi Susu KESAN">
+                        <div class="grow">
+                            <span class="text-[10px] font-bold uppercase tracking-widest text-mustard">Kopi</span>
+                            <h4 class="font-serif font-bold text-base text-coffee-dark">Es Kopi Susu KESAN</h4>
+                            <p class="text-xs text-gray-500 line-clamp-2 mt-0.5">Espresso blend, gula aren murni & susu creamy signature.</p>
+                            <p class="text-sm font-bold text-coffee mt-1">Rp 20.000</p>
+                        </div>
+                    </div>
+
+                    <div class="menu-item-card kopi bg-white rounded-2xl p-4 border border-coffee/10 shadow-sm hover:shadow-md transition-all flex gap-4 items-center">
+                        <img src="https://images.unsplash.com/photo-1534778101976-62847782c213?auto=format&fit=crop&w=300&q=80" class="w-20 h-20 rounded-xl object-cover shrink-0" alt="Americano Hot/Ice">
+                        <div class="grow">
+                            <span class="text-[10px] font-bold uppercase tracking-widest text-mustard">Kopi</span>
+                            <h4 class="font-serif font-bold text-base text-coffee-dark">Americano (Hot / Ice)</h4>
+                            <p class="text-xs text-gray-500 line-clamp-2 mt-0.5">Double shot espresso arabica dengan citarasa kaya & clean.</p>
+                            <p class="text-sm font-bold text-coffee mt-1">Rp 18.000</p>
+                        </div>
+                    </div>
+
+                    <div class="menu-item-card kopi bg-white rounded-2xl p-4 border border-coffee/10 shadow-sm hover:shadow-md transition-all flex gap-4 items-center">
+                        <img src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?auto=format&fit=crop&w=300&q=80" class="w-20 h-20 rounded-xl object-cover shrink-0" alt="Caramel Macchiato">
+                        <div class="grow">
+                            <span class="text-[10px] font-bold uppercase tracking-widest text-mustard">Kopi</span>
+                            <h4 class="font-serif font-bold text-base text-coffee-dark">Caramel Macchiato</h4>
+                            <p class="text-xs text-gray-500 line-clamp-2 mt-0.5">Espresso manis lembut dipadu vanila & draking sirup karamel.</p>
+                            <p class="text-sm font-bold text-coffee mt-1">Rp 26.000</p>
+                        </div>
+                    </div>
+
+                    <div class="menu-item-card kopi bg-white rounded-2xl p-4 border border-coffee/10 shadow-sm hover:shadow-md transition-all flex gap-4 items-center">
+                        <img src="https://images.unsplash.com/photo-1585495498047-b38965f72671?auto=format&fit=crop&w=300&q=80" class="w-20 h-20 rounded-xl object-cover shrink-0" alt="Cappuccino Warm">
+                        <div class="grow">
+                            <span class="text-[10px] font-bold uppercase tracking-widest text-mustard">Kopi</span>
+                            <h4 class="font-serif font-bold text-base text-coffee-dark">Classic Cappuccino</h4>
+                            <p class="text-xs text-gray-500 line-clamp-2 mt-0.5">Espresso dengan busa susu tebal halus khas Italia.</p>
+                            <p class="text-sm font-bold text-coffee mt-1">Rp 24.000</p>
+                        </div>
+                    </div>
+
+                    <!-- NON KOPI -->
+                    <div class="menu-item-card nonkopi bg-white rounded-2xl p-4 border border-coffee/10 shadow-sm hover:shadow-md transition-all flex gap-4 items-center">
+                        <img src="https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=300&q=80" class="w-20 h-20 rounded-xl object-cover shrink-0" alt="Chocolate Latte">
+                        <div class="grow">
+                            <span class="text-[10px] font-bold uppercase tracking-widest text-mustard">Non-Kopi</span>
+                            <h4 class="font-serif font-bold text-base text-coffee-dark">Chocolate Latte</h4>
+                            <p class="text-xs text-gray-500 line-clamp-2 mt-0.5">Cokelat pekat pilihan disajikan hangat/dingin bermikrofoam.</p>
+                            <p class="text-sm font-bold text-coffee mt-1">Rp 22.000</p>
+                        </div>
+                    </div>
+
+                    <div class="menu-item-card nonkopi bg-white rounded-2xl p-4 border border-coffee/10 shadow-sm hover:shadow-md transition-all flex gap-4 items-center">
+                        <img src="https://images.unsplash.com/photo-1536256263959-770b48d82b0a?auto=format&fit=crop&w=300&q=80" class="w-20 h-20 rounded-xl object-cover shrink-0" alt="Matcha Green Tea Latte">
+                        <div class="grow">
+                            <span class="text-[10px] font-bold uppercase tracking-widest text-mustard">Non-Kopi</span>
+                            <h4 class="font-serif font-bold text-base text-coffee-dark">Matcha Green Tea Latte</h4>
+                            <p class="text-xs text-gray-500 line-clamp-2 mt-0.5">Bubuk matcha Jepang asli bercampur susu lembut aroma harum.</p>
+                            <p class="text-sm font-bold text-coffee mt-1">Rp 25.000</p>
+                        </div>
+                    </div>
+
+                    <div class="menu-item-card nonkopi bg-white rounded-2xl p-4 border border-coffee/10 shadow-sm hover:shadow-md transition-all flex gap-4 items-center">
+                        <img src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=300&q=80" class="w-20 h-20 rounded-xl object-cover shrink-0" alt="Lychee Tea Mojito">
+                        <div class="grow">
+                            <span class="text-[10px] font-bold uppercase tracking-widest text-mustard">Non-Kopi</span>
+                            <h4 class="font-serif font-bold text-base text-coffee-dark">Fresh Lychee Tea</h4>
+                            <p class="text-xs text-gray-500 line-clamp-2 mt-0.5">Teh jasmine dingin dengan ekstrak buah dan buah leci asli.</p>
+                            <p class="text-sm font-bold text-coffee mt-1">Rp 19.000</p>
+                        </div>
+                    </div>
+
+                    <!-- DESSERT -->
+                    <div class="menu-item-card dessert bg-white rounded-2xl p-4 border border-coffee/10 shadow-sm hover:shadow-md transition-all flex gap-4 items-center">
+                        <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=300&q=80" class="w-20 h-20 rounded-xl object-cover shrink-0" alt="Chocolate Lava Cake">
+                        <div class="grow">
+                            <span class="text-[10px] font-bold uppercase tracking-widest text-mustard">Dessert</span>
+                            <h4 class="font-serif font-bold text-base text-coffee-dark">Chocolate Lava Cake</h4>
+                            <p class="text-xs text-gray-500 line-clamp-2 mt-0.5">Kue cokelat hangat lumer disajikan dengan es krim vanila.</p>
+                            <p class="text-sm font-bold text-coffee mt-1">Rp 27.000</p>
+                        </div>
+                    </div>
+
+                    <div class="menu-item-card dessert bg-white rounded-2xl p-4 border border-coffee/10 shadow-sm hover:shadow-md transition-all flex gap-4 items-center">
+                        <img src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=300&q=80" class="w-20 h-20 rounded-xl object-cover shrink-0" alt="Pancake Ice Cream">
+                        <div class="grow">
+                            <span class="text-[10px] font-bold uppercase tracking-widest text-mustard">Dessert</span>
+                            <h4 class="font-serif font-bold text-base text-coffee-dark">Fluffy Pancake Ice Cream</h4>
+                            <p class="text-xs text-gray-500 line-clamp-2 mt-0.5">Pancake lembut berlapis sirup maple & scoop es krim.</p>
+                            <p class="text-sm font-bold text-coffee mt-1">Rp 23.000</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Modal Footer -->
+            <div class="bg-white border-t border-coffee/10 p-4 sm:p-5 flex flex-col sm:flex-row justify-between items-center gap-3 shrink-0">
+                <span class="text-xs text-gray-500">Menampilkan seluruh varian favorit makanan & minuman KESAN.</span>
+                <a href="#reservasi" onclick="closeMenuModal()" class="w-full sm:w-auto px-6 py-2.5 bg-mustard hover:bg-mustard-hover text-white rounded-full font-semibold text-xs text-center transition-all">
+                    Pesan via Reservasi
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- ================= 5. FASILITAS DAN LAYANAN ================= -->
+    <section id="fasilitas" class="py-20 bg-warmbg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs font-semibold uppercase tracking-widest text-mustard bg-mustard/10 px-3 py-1 rounded-md border border-mustard/20">
+                    Fasilitas Lengkap
+                </span>
+                <h2 class="text-3xl sm:text-4xl font-serif font-bold text-coffee-dark mt-3 mb-4">Satu Tempat, Banyak Cerita</h2>
+                <p class="text-gray-600 text-sm sm:text-base">
+                    Kami menghadirkan aneka fasilitas hiburan dan kenyamanan untuk melengkapi momen spesial Anda di KESAN.
+                </p>
+            </div>
+
+            <!-- Facility Cards Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Facility 1: Live Music -->
+                <div class="bg-white rounded-2xl p-6 shadow-sm hover:shadow-md transition-all border border-coffee/5 flex flex-col justify-between">
+                    <div>
+                        <div class="img-zoom-container rounded-xl h-48 mb-6">
+                            <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=800&q=80" 
+                                 alt="Live Music KESAN" 
+                                 class="w-full h-full object-cover img-zoom"
+                                 onerror="this.src='https://placehold.co/800x600/4C2611/FFFFFF?text=Live+Music'">
+                        </div>
+                        <div class="flex items-center gap-3 mb-3">
+                            <div class="p-2 bg-mustard/10 rounded-lg text-mustard">
+                                <i class="fa-solid fa-music text-lg"></i>
+                            </div>
+                            <h3 class="font-serif font-bold text-xl text-coffee-dark">Live Music</h3>
+                        </div>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            Nikmati suasana santai ditemani penampilan musik langsung dari musisi lokal berbakat setiap akhir pekan.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Facility 2: Karaoke -->
+                <div class="bg-white rounded-2xl p-6 shadow-sm hover:shadow-md transition-all border border-coffee/5 flex flex-col justify-between">
+                    <div>
+                        <div class="img-zoom-container rounded-xl h-48 mb-6">
+                            <img src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&w=800&q=80" 
+                                 alt="Karaoke Corner KESAN" 
+                                 class="w-full h-full object-cover img-zoom"
+                                 onerror="this.src='https://placehold.co/800x600/4C2611/FFFFFF?text=Karaoke'">
+                        </div>
+                        <div class="flex items-center gap-3 mb-3">
+                            <div class="p-2 bg-mustard/10 rounded-lg text-mustard">
+                                <i class="fa-solid fa-microphone text-lg"></i>
+                            </div>
+                            <h3 class="font-serif font-bold text-xl text-coffee-dark">Karaoke</h3>
+                        </div>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            Waktunya bernyanyi dan bersenang-senang mengekspresikan lagu favorit bersama sahabat dan keluarga.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Facility 3: Reservasi Grup -->
+                <div class="bg-white rounded-2xl p-6 shadow-sm hover:shadow-md transition-all border border-coffee/5 flex flex-col justify-between">
+                    <div>
+                        <div class="img-zoom-container rounded-xl h-48 mb-6">
+                            <img src="https://images.unsplash.com/photo-1528605248644-14dd04022da1?auto=format&fit=crop&w=800&q=80" 
+                                 alt="Reservasi Grup KESAN" 
+                                 class="w-full h-full object-cover img-zoom"
+                                 onerror="this.src='https://placehold.co/800x600/4C2611/FFFFFF?text=Reservasi+Grup'">
+                        </div>
+                        <div class="flex items-center gap-3 mb-3">
+                            <div class="p-2 bg-mustard/10 rounded-lg text-mustard">
+                                <i class="fa-solid fa-users text-lg"></i>
+                            </div>
+                            <h3 class="font-serif font-bold text-xl text-coffee-dark">Reservasi Grup</h3>
+                        </div>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            Tempat yang luas dan nyaman untuk berkumpul, arisan, reuni, ulang tahun, serta acara komunitas.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Facility 4: Free Wi-Fi -->
+                <div class="bg-white rounded-2xl p-6 shadow-sm hover:shadow-md transition-all border border-coffee/5 flex flex-col justify-between">
+                    <div>
+                        <div class="img-zoom-container rounded-xl h-48 mb-6">
+                            <img src="https://images.unsplash.com/photo-1521017432531-fbd92d768814?auto=format&fit=crop&w=800&q=80" 
+                                 alt="Free Wi-Fi KESAN" 
+                                 class="w-full h-full object-cover img-zoom"
+                                 onerror="this.src='https://placehold.co/800x600/4C2611/FFFFFF?text=Free+WiFi'">
+                        </div>
+                        <div class="flex items-center gap-3 mb-3">
+                            <div class="p-2 bg-mustard/10 rounded-lg text-mustard">
+                                <i class="fa-solid fa-wifi text-lg"></i>
+                            </div>
+                            <h3 class="font-serif font-bold text-xl text-coffee-dark">Free Wi-Fi</h3>
+                        </div>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            Koneksi internet cepat dan stabil agar Anda tetap terhubung saat bekerja santai atau bersosialisasi.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Facility 5: Dine-in Nyaman -->
+                <div class="bg-white rounded-2xl p-6 shadow-sm hover:shadow-md transition-all border border-coffee/5 flex flex-col justify-between md:col-span-2 lg:col-span-2">
+                    <div>
+                        <div class="img-zoom-container rounded-xl h-48 mb-6">
+                            <img src="https://images.unsplash.com/photo-1559925393-8be0ec4767c8?auto=format&fit=crop&w=1200&q=80" 
+                                 alt="Dine-in Suasana Hangat" 
+                                 class="w-full h-full object-cover img-zoom"
+                                 onerror="this.src='https://placehold.co/1200x600/4C2611/FFFFFF?text=Dine-in'">
+                        </div>
+                        <div class="flex items-center gap-3 mb-3">
+                            <div class="p-2 bg-mustard/10 rounded-lg text-mustard">
+                                <i class="fa-solid fa-utensils text-lg"></i>
+                            </div>
+                            <h3 class="font-serif font-bold text-xl text-coffee-dark">Dine-in</h3>
+                        </div>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            Nikmati makanan dan minuman langsung di tempat dengan penataan meja eksklusif, pencahayaan hangat, dan pelayanan penuh keramahan.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= 6. RESERVASI ACARA ================= -->
+    <section id="reservasi" class="py-20 bg-coffee-dark text-white relative overflow-hidden">
+        <!-- Background Decorative Blur -->
+        <div class="absolute -top-24 -right-24 w-96 h-96 bg-mustard/20 rounded-full blur-3xl pointer-events-none"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <div class="lg:col-span-7 space-y-6">
+                    <span class="text-xs font-semibold uppercase tracking-widest text-mustard bg-mustard/10 px-3 py-1 rounded-md border border-mustard/30">
+                        Acara Special
+                    </span>
+                    <h2 class="text-3xl sm:text-5xl font-serif font-bold leading-tight">
+                        Rencanakan Momen Spesialmu di <span class="text-mustard">KESAN</span>
+                    </h2>
+                    <p class="text-gray-300 leading-relaxed font-sans text-base sm:text-lg">
+                        Dari pertemuan keluarga hingga acara komunitas, KESAN siap menjadi tempat untuk berbagi kebersamaan. Hubungi tim kami untuk informasi ketersediaan tempat dan kebutuhan acara Anda.
+                    </p>
+
+                    <div class="grid grid-cols-2 gap-4 pt-4 border-t border-white/10">
+                        <div>
+                            <p class="text-2xl font-serif font-bold text-mustard">Lengkap</p>
+                            <p class="text-xs text-gray-400">Peralatan Audio & Sound System</p>
+                        </div>
+                        <div>
+                            <p class="text-2xl font-serif font-bold text-mustard">Fleksibel</p>
+                            <p class="text-xs text-gray-400">Penataan Meja Sesuai Kebutuhan</p>
+                        </div>
+                    </div>
+
+                    <div class="pt-4">
+                        <a href="#kontak" class="inline-flex items-center gap-3 px-8 py-4 bg-mustard hover:bg-mustard-hover text-white rounded-full font-semibold transition-all shadow-lg shadow-mustard/20">
+                            <span>Ajukan Reservasi Sekarang</span>
+                            <i class="fa-solid fa-calendar-plus text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-5">
+                    <div class="img-zoom-container rounded-3xl border-4 border-mustard/30 shadow-2xl h-96">
+                        <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=800&q=80" 
+                             alt="Suasana Reservasi Acara Grup" 
+                             class="w-full h-full object-cover img-zoom"
+                             onerror="this.src='https://placehold.co/800x1000/4C2611/FFFFFF?text=Acara+Grup'">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= 7. GALERI FOTO (WITH LIGHTBOX) ================= -->
+    <section id="galeri" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs font-semibold uppercase tracking-widest text-mustard bg-mustard/10 px-3 py-1 rounded-md border border-mustard/20">
+                    Galeri Visual
+                </span>
+                <h2 class="text-3xl sm:text-4xl font-serif font-bold text-coffee-dark mt-3 mb-4">Sekilas Tentang KESAN</h2>
+                <p class="text-gray-600 text-sm sm:text-base">
+                    Intip momen hangat, estetika sudut cafe, hidangan menggugah selera, serta kebersamaan pengunjung kami. Klik foto untuk memperbesar.
+                </p>
+            </div>
+
+            <!-- Gallery Grid -->
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                
+                <!-- Gallery Item 1 -->
+                <div class="img-zoom-container rounded-2xl h-60 cursor-pointer relative group" onclick="openLightbox('https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=1200&q=80', 'Interior Cafe Warm Lighting')">
+                    <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=600&q=80" 
+                         alt="Interior Cafe" 
+                         class="w-full h-full object-cover img-zoom"
+                         onerror="this.src='https://placehold.co/600x600/4C2611/FFFFFF?text=Interior'">
+                    <div class="absolute inset-0 bg-coffee-dark/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white">
+                        <i class="fa-solid fa-magnifying-glass-plus text-2xl"></i>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 2 -->
+                <div class="img-zoom-container rounded-2xl h-60 cursor-pointer relative group" onclick="openLightbox('https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1200&q=80', 'Hidangan Unggulan KESAN')">
+                    <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=600&q=80" 
+                         alt="Hidangan Unggulan" 
+                         class="w-full h-full object-cover img-zoom"
+                         onerror="this.src='https://placehold.co/600x600/4C2611/FFFFFF?text=Hidangan'">
+                    <div class="absolute inset-0 bg-coffee-dark/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white">
+                        <i class="fa-solid fa-magnifying-glass-plus text-2xl"></i>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 3 -->
+                <div class="img-zoom-container rounded-2xl h-60 cursor-pointer relative group" onclick="openLightbox('https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=1200&q=80', 'Sesi Live Music Malam Hari')">
+                    <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=600&q=80" 
+                         alt="Live Music Session" 
+                         class="w-full h-full object-cover img-zoom"
+                         onerror="this.src='https://placehold.co/600x600/4C2611/FFFFFF?text=Live+Music'">
+                    <div class="absolute inset-0 bg-coffee-dark/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white">
+                        <i class="fa-solid fa-magnifying-glass-plus text-2xl"></i>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 4 -->
+                <div class="img-zoom-container rounded-2xl h-60 cursor-pointer relative group" onclick="openLightbox('https://images.unsplash.com/photo-1517701604599-bb29b565090c?auto=format&fit=crop&w=1200&q=80', 'Racikan Es Kopi Susu KESAN')">
+                    <img src="https://images.unsplash.com/photo-1517701604599-bb29b565090c?auto=format&fit=crop&w=600&q=80" 
+                         alt="Aneka Minuman Kopi" 
+                         class="w-full h-full object-cover img-zoom"
+                         onerror="this.src='https://placehold.co/600x600/4C2611/FFFFFF?text=Minuman'">
+                    <div class="absolute inset-0 bg-coffee-dark/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white">
+                        <i class="fa-solid fa-magnifying-glass-plus text-2xl"></i>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 5 -->
+                <div class="img-zoom-container rounded-2xl h-60 cursor-pointer relative group" onclick="openLightbox('https://images.unsplash.com/photo-1528605248644-14dd04022da1?auto=format&fit=crop&w=1200&q=80', 'Kebersamaan Pengunjung di KESAN')">
+                    <img src="https://images.unsplash.com/photo-1528605248644-14dd04022da1?auto=format&fit=crop&w=600&q=80" 
+                         alt="Aktivitas Kebersamaan Pengunjung" 
+                         class="w-full h-full object-cover img-zoom"
+                         onerror="this.src='https://placehold.co/600x600/4C2611/FFFFFF?text=Kebersamaan'">
+                    <div class="absolute inset-0 bg-coffee-dark/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white">
+                        <i class="fa-solid fa-magnifying-glass-plus text-2xl"></i>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 6 -->
+                <div class="img-zoom-container rounded-2xl h-60 cursor-pointer relative group" onclick="openLightbox('https://images.unsplash.com/photo-1559925393-8be0ec4767c8?auto=format&fit=crop&w=1200&q=80', 'Tampilan Eksterior Depan Resto')">
+                    <img src="https://images.unsplash.com/photo-1559925393-8be0ec4767c8?auto=format&fit=crop&w=600&q=80" 
+                         alt="Eksterior Restoran KESAN" 
+                         class="w-full h-full object-cover img-zoom"
+                         onerror="this.src='https://placehold.co/600x600/4C2611/FFFFFF?text=Eksterior'">
+                    <div class="absolute inset-0 bg-coffee-dark/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white">
+                        <i class="fa-solid fa-magnifying-glass-plus text-2xl"></i>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 7 -->
+                <div class="img-zoom-container rounded-2xl h-60 cursor-pointer relative group" onclick="openLightbox('https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1200&q=80', 'Chicken Steak Hotplate')">
+                    <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=600&q=80" 
+                         alt="Chicken Steak" 
+                         class="w-full h-full object-cover img-zoom"
+                         onerror="this.src='https://placehold.co/600x600/4C2611/FFFFFF?text=Steak'">
+                    <div class="absolute inset-0 bg-coffee-dark/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white">
+                        <i class="fa-solid fa-magnifying-glass-plus text-2xl"></i>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 8 -->
+                <div class="img-zoom-container rounded-2xl h-60 cursor-pointer relative group" onclick="openLightbox('https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&w=1200&q=80', 'Kecerian Sesi Karaoke')">
+                    <img src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&w=600&q=80" 
+                         alt="Suasana Karaoke Malam" 
+                         class="w-full h-full object-cover img-zoom"
+                         onerror="this.src='https://placehold.co/600x600/4C2611/FFFFFF?text=Karaoke'">
+                    <div class="absolute inset-0 bg-coffee-dark/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white">
+                        <i class="fa-solid fa-magnifying-glass-plus text-2xl"></i>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox Modal Screen -->
+    <div id="lightboxModal" class="fixed inset-0 z-50 bg-black/90 hidden items-center justify-center p-4" onclick="closeLightbox()">
+        <div class="relative max-w-4xl w-full" onclick="event.stopPropagation()">
+            <button onclick="closeLightbox()" class="absolute -top-12 right-0 text-white text-3xl hover:text-mustard focus:outline-none">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <img id="lightboxImg" src="" alt="Galeri KESAN" class="w-full max-h-[80vh] object-contain rounded-lg">
+            <p id="lightboxCaption" class="text-center text-white text-sm mt-3 font-serif italic"></p>
+        </div>
+    </div>
+
+    <!-- ================= 8. TESTIMONI PELANGGAN ================= -->
+    <section class="py-20 bg-warmbg border-t border-b border-coffee/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs font-semibold uppercase tracking-widest text-mustard bg-mustard/10 px-3 py-1 rounded-md border border-mustard/20">
+                    Ulasan Pelanggan
+                </span>
+                <h2 class="text-3xl sm:text-4xl font-serif font-bold text-coffee-dark mt-3 mb-2">Momen Baik, Cerita Berkesan</h2>
+                <span class="inline-block text-xs text-coffee-light font-medium bg-amber-100/60 px-2.5 py-0.5 rounded border border-amber-200">Contoh Testimoni Demonstrasi</span>
+            </div>
+
+            <!-- Testimonial Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- Testimonial 1 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-coffee/5 relative flex flex-col justify-between">
+                    <div>
+                        <div class="flex text-amber-400 gap-1 text-sm mb-4">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-gray-700 text-sm leading-relaxed italic mb-6">
+                            "Tempatnya nyaman banget buat makan bareng keluarga. Ayam Bakar KESAN bumbunya meresap sampai ke dalam. Ditambah live music-nya bikin suasana makin hangat!"
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-gray-100">
+                        <div class="w-10 h-10 rounded-full bg-mustard/20 text-mustard flex items-center justify-center font-bold font-serif">
+                            R
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-sm text-coffee-dark">Rian S.</h4>
+                            <p class="text-xs text-gray-500">Pengunjung Keluarga</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-coffee/5 relative flex flex-col justify-between">
+                    <div>
+                        <div class="flex text-amber-400 gap-1 text-sm mb-4">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-gray-700 text-sm leading-relaxed italic mb-6">
+                            "Sangat merekomendasikan Es Kopi Susu KESAN! Harganya bersahabat tapi rasanya mewah banget. Fasilitas Wi-Fi juga kencang buat kerja santai sore."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-gray-100">
+                        <div class="w-10 h-10 rounded-full bg-mustard/20 text-mustard flex items-center justify-center font-bold font-serif">
+                            A
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-sm text-coffee-dark">Amelia Putri</h4>
+                            <p class="text-xs text-gray-500">Pelanggan Setia Cafe</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-coffee/5 relative flex flex-col justify-between">
+                    <div>
+                        <div class="flex text-amber-400 gap-1 text-sm mb-4">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-gray-700 text-sm leading-relaxed italic mb-6">
+                            "Kemarin reservasi untuk arisan kantor. Pelayanannya sangat profesional, tempat luas, dan fasilitas karaoke-nya bikin semua anggota senang!"
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-gray-100">
+                        <div class="w-10 h-10 rounded-full bg-mustard/20 text-mustard flex items-center justify-center font-bold font-serif">
+                            D
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-sm text-coffee-dark">Dian & Komunitas</h4>
+                            <p class="text-xs text-gray-500">Penyelenggara Acara</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= 9. INFORMASI LOKASI & JAM OPERASIONAL ================= -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Info Text Block -->
+                <div class="lg:col-span-5 space-y-6">
+                    <span class="text-xs font-semibold uppercase tracking-widest text-mustard bg-mustard/10 px-3 py-1 rounded-md border border-mustard/20">
+                        Kunjungi Kami
+                    </span>
+                    <h2 class="text-3xl sm:text-4xl font-serif font-bold text-coffee-dark">Temukan KESAN</h2>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Nikmati pengalaman kuliner berkesan secara langsung di outlet KESAN Cafe & Resto.
+                    </p>
+
+                    <div class="space-y-4 pt-2">
+                        <!-- Alamat -->
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-full bg-warmbg text-mustard flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-sm text-coffee-dark">Alamat Utama</h4>
+                                <p class="text-xs text-gray-600 mt-0.5">Jl. Kuliner Utama No. 88, Pusat Kota (Placeholder Lokasi Resmi)</p>
+                            </div>
+                        </div>
+
+                        <!-- Jam Operasional -->
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-full bg-warmbg text-mustard flex items-center justify-center shrink-0">
+                                <i class="fa-regular fa-clock"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-sm text-coffee-dark">Jam Operasional</h4>
+                                <p class="text-xs text-gray-600 mt-0.5">Senin - Minggu: 10:00 - 23:00 WIB</p>
+                            </div>
+                        </div>
+
+                        <!-- Kontak Direct -->
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-full bg-warmbg text-mustard flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-sm text-coffee-dark">Kontak & WhatsApp</h4>
+                                <p class="text-xs text-gray-600 mt-0.5">+62 812-XXXX-XXXX (Placeholder WhatsApp Resmi)</p>
+                            </div>
+                        </div>
+
+                        <!-- Fasilitas Parkir -->
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-full bg-warmbg text-mustard flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-square-p"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-sm text-coffee-dark">Area Parkir</h4>
+                                <p class="text-xs text-gray-600 mt-0.5">Tersedia area parkir luas & aman untuk mobil dan sepeda motor.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pt-4">
+                        <button onclick="alert('Tautan Google Maps resmi akan diaktifkan setelah koordinat alamat diverifikasi.')" class="px-6 py-3 border-2 border-mustard text-mustard hover:bg-mustard hover:text-white rounded-full text-sm font-semibold transition-all inline-flex items-center gap-2">
+                            <i class="fa-solid fa-map-location-dot"></i>
+                            <span>Lihat Lokasi di Google Maps</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Interactive Map Placeholder Container -->
+                <div class="lg:col-span-7">
+                    <div class="bg-warmbg rounded-3xl p-4 border border-coffee/10 shadow-inner h-96 relative overflow-hidden flex flex-col items-center justify-center text-center">
+                        <i class="fa-solid fa-map-marked-alt text-5xl text-mustard mb-4 animate-bounce"></i>
+                        <h3 class="font-serif font-bold text-coffee-dark text-xl mb-1">Peta Lokasi Interaktif</h3>
+                        <p class="text-gray-500 text-xs max-w-md px-4">
+                            Peta Google Maps terintegrasi akan tampil di area ini setelah koordinat alamat KESAN Cafe & Resto terkonfigurasi.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= 10. FORMULIR KONTAK TERINTEGRASI ================= -->
+    <section id="kontak" class="py-20 bg-warmbg">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center mb-12">
+                <span class="text-xs font-semibold uppercase tracking-widest text-mustard bg-mustard/10 px-3 py-1 rounded-md border border-mustard/20">
+                    Hubungi Kami
+                </span>
+                <h2 class="text-3xl sm:text-4xl font-serif font-bold text-coffee-dark mt-3 mb-2">Ada Pertanyaan? Hubungi Kami</h2>
+                <p class="text-gray-600 text-sm">
+                    Isi formulir di bawah ini untuk reservasi acara, pertanyaan menu, atau kerjasama.
+                </p>
+            </div>
+
+            <!-- Form Card -->
+            <div class="bg-white rounded-3xl p-6 sm:p-10 shadow-lg border border-coffee/5">
+                
+                <!-- Demo Mode Notice -->
+                <div id="demoNotice" class="hidden mb-6 p-4 rounded-xl bg-amber-50 border border-amber-200 text-amber-800 text-xs flex items-center gap-3">
+                    <i class="fa-solid fa-circle-info text-amber-600 text-lg"></i>
+                    <span><strong>Mode Demonstrasi:</strong> Formulir bekerja dengan validasi penuh. Di versi produksi, pesan ini akan terkirim langsung ke email/WhatsApp admin KESAN.</span>
+                </div>
+
+                <!-- Form Element -->
+                <form id="contactForm" onsubmit="handleFormSubmit(event)" class="space-y-6">
+                    
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <!-- Nama Lengkap -->
+                        <div>
+                            <label for="fullName" class="block text-xs font-bold uppercase tracking-wider text-coffee-dark mb-2">Nama Lengkap *</label>
+                            <input type="text" id="fullName" required placeholder="Contoh: Budi Santoso" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-mustard focus:ring-2 focus:ring-mustard/20 outline-none text-sm transition-all">
+                        </div>
+
+                        <!-- Email -->
+                        <div>
+                            <label for="email" class="block text-xs font-bold uppercase tracking-wider text-coffee-dark mb-2">Alamat Email *</label>
+                            <input type="email" id="email" required placeholder="budi@example.com" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-mustard focus:ring-2 focus:ring-mustard/20 outline-none text-sm transition-all">
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <!-- Nomor WhatsApp -->
+                        <div>
+                            <label for="whatsapp" class="block text-xs font-bold uppercase tracking-wider text-coffee-dark mb-2">Nomor WhatsApp *</label>
+                            <input type="tel" id="whatsapp" required placeholder="081234567890" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-mustard focus:ring-2 focus:ring-mustard/20 outline-none text-sm transition-all">
+                        </div>
+
+                        <!-- Jenis Kebutuhan -->
+                        <div>
+                            <label for="needType" class="block text-xs font-bold uppercase tracking-wider text-coffee-dark mb-2">Jenis Kebutuhan *</label>
+                            <select id="needType" onchange="toggleReservationFields()" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-mustard focus:ring-2 focus:ring-mustard/20 outline-none text-sm transition-all bg-white">
+                                <option value="Informasi Menu">Informasi Menu</option>
+                                <option value="Reservasi Grup">Reservasi Grup</option>
+                                <option value="Acara Spesial">Acara Spesial / Reuni</option>
+                                <option value="Kerja Sama">Kerja Sama</option>
+                                <option value="Lainnya">Lainnya</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Dynamic Conditional Fields for Reservation -->
+                    <div id="reservationFields" class="hidden grid-cols-1 sm:grid-cols-2 gap-6 p-4 bg-warmbg rounded-2xl border border-mustard/20">
+                        <div>
+                            <label for="eventDate" class="block text-xs font-bold uppercase tracking-wider text-coffee-dark mb-2">Tanggal Rencana Acara</label>
+                            <input type="date" id="eventDate" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-mustard focus:ring-2 focus:ring-mustard/20 outline-none text-sm bg-white">
+                        </div>
+                        <div>
+                            <label for="guestCount" class="block text-xs font-bold uppercase tracking-wider text-coffee-dark mb-2">Estimasi Jumlah Tamu</label>
+                            <input type="number" id="guestCount" placeholder="Contoh: 15" min="1" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-mustard focus:ring-2 focus:ring-mustard/20 outline-none text-sm bg-white">
+                        </div>
+                    </div>
+
+                    <!-- Subjek Pesan -->
+                    <div>
+                        <label for="subject" class="block text-xs font-bold uppercase tracking-wider text-coffee-dark mb-2">Subjek Pesan *</label>
+                        <input type="text" id="subject" required placeholder="Tuliskan judul singkat pesan Anda" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-mustard focus:ring-2 focus:ring-mustard/20 outline-none text-sm transition-all">
+                    </div>
+
+                    <!-- Isi Pesan -->
+                    <div>
+                        <label for="message" class="block text-xs font-bold uppercase tracking-wider text-coffee-dark mb-2">Detail Pesan *</label>
+                        <textarea id="message" rows="4" required placeholder="Tuliskan pertanyaan atau kebutuhan acara Anda secara rinci di sini..." class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-mustard focus:ring-2 focus:ring-mustard/20 outline-none text-sm transition-all"></textarea>
+                    </div>
+
+                    <!-- Privacy Agreement Checkbox -->
+                    <div class="flex items-center gap-3">
+                        <input type="checkbox" id="privacyConsent" required class="w-4 h-4 text-mustard focus:ring-mustard rounded border-gray-300">
+                        <label for="privacyConsent" class="text-xs text-gray-600">
+                            Saya menyetujui bahwa data ini digunakan oleh tim KESAN Cafe & Resto untuk merespons permintaan saya.
+                        </label>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <div>
+                        <button type="submit" id="submitBtn" class="w-full py-4 bg-mustard hover:bg-mustard-hover text-white rounded-xl font-bold transition-all shadow-md flex items-center justify-center gap-2">
+                            <span id="btnText">Kirim Pesan Sekarang</span>
+                            <i class="fa-solid fa-paper-plane text-xs"></i>
+                        </button>
+                    </div>
+
+                </form>
+
+                <!-- Status Feedback Message Container -->
+                <div id="formFeedback" class="hidden mt-6 p-4 rounded-xl text-sm font-medium text-center"></div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= 11. FAQ ACCORDION ================= -->
+    <section id="faq" class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center mb-12">
+                <span class="text-xs font-semibold uppercase tracking-widest text-mustard bg-mustard/10 px-3 py-1 rounded-md border border-mustard/20">
+                    Pertanyaan Umum
+                </span>
+                <h2 class="text-3xl sm:text-4xl font-serif font-bold text-coffee-dark mt-3 mb-2">Frequently Asked Questions</h2>
+                <p class="text-gray-600 text-sm">
+                    Jawaban cepat untuk pertanyaan yang sering diajukan seputar KESAN Cafe & Resto.
+                </p>
+            </div>
+
+            <!-- Accordion Items Container -->
+            <div class="space-y-4">
+                
+                <!-- FAQ Item 1 -->
+                <div class="border border-coffee/10 rounded-2xl overflow-hidden bg-warmbg/50">
+                    <button onclick="toggleFaq(1)" class="w-full p-5 text-left font-serif font-bold text-coffee-dark flex justify-between items-center focus:outline-none">
+                        <span>Di mana lokasi KESAN Cafe & Resto?</span>
+                        <i class="fa-solid fa-chevron-down text-mustard transition-transform duration-300" id="faqIcon-1"></i>
+                    </button>
+                    <div id="faqContent-1" class="hidden px-5 pb-5 text-sm text-gray-600 leading-relaxed border-t border-coffee/5 pt-3">
+                        KESAN Cafe & Resto berlokasi di area strategis pusat kota. Informasi alamat presisi dan tautan Google Maps lengkap dapat diperoleh dengan menghubungi tim customer service kami.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="border border-coffee/10 rounded-2xl overflow-hidden bg-warmbg/50">
+                    <button onclick="toggleFaq(2)" class="w-full p-5 text-left font-serif font-bold text-coffee-dark flex justify-between items-center focus:outline-none">
+                        <span>Apakah KESAN menerima reservasi grup atau acara privat?</span>
+                        <i class="fa-solid fa-chevron-down text-mustard transition-transform duration-300" id="faqIcon-2"></i>
+                    </button>
+                    <div id="faqContent-2" class="hidden px-5 pb-5 text-sm text-gray-600 leading-relaxed border-t border-coffee/5 pt-3">
+                        Ya, kami melayani reservasi tempat untuk grup, reuni, arisan, ulang tahun, dan pertemuan bisnis. Silakan isi formulir reservasi atau hubungi tim kami minimal 2 hari sebelum tanggal acara.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="border border-coffee/10 rounded-2xl overflow-hidden bg-warmbg/50">
+                    <button onclick="toggleFaq(3)" class="w-full p-5 text-left font-serif font-bold text-coffee-dark flex justify-between items-center focus:outline-none">
+                        <span>Apakah tersedia live music dan kapan jadwal tampilnya?</span>
+                        <i class="fa-solid fa-chevron-down text-mustard transition-transform duration-300" id="faqIcon-3"></i>
+                    </button>
+                    <div id="faqContent-3" class="hidden px-5 pb-5 text-sm text-gray-600 leading-relaxed border-t border-coffee/5 pt-3">
+                        Tentu! Kami menghadirkan penampilan live music secara rutin, khususnya pada akhir pekan (Jumat - Minggu malam) untuk menemani waktu santai Anda.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="border border-coffee/10 rounded-2xl overflow-hidden bg-warmbg/50">
+                    <button onclick="toggleFaq(4)" class="w-full p-5 text-left font-serif font-bold text-coffee-dark flex justify-between items-center focus:outline-none">
+                        <span>Apakah tersedia fasilitas karaoke bagi pengunjung?</span>
+                        <i class="fa-solid fa-chevron-down text-mustard transition-transform duration-300" id="faqIcon-4"></i>
+                    </button>
+                    <div id="faqContent-4" class="hidden px-5 pb-5 text-sm text-gray-600 leading-relaxed border-t border-coffee/5 pt-3">
+                        Ya, KESAN menyediakan fasilitas karaoke corner yang seru dan dapat dinikmati bersama teman maupun keluarga.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 5 -->
+                <div class="border border-coffee/10 rounded-2xl overflow-hidden bg-warmbg/50">
+                    <button onclick="toggleFaq(5)" class="w-full p-5 text-left font-serif font-bold text-coffee-dark flex justify-between items-center focus:outline-none">
+                        <span>Bagaimana cara melihat menu dan harga terbaru?</span>
+                        <i class="fa-solid fa-chevron-down text-mustard transition-transform duration-300" id="faqIcon-5"></i>
+                    </button>
+                    <div id="faqContent-5" class="hidden px-5 pb-5 text-sm text-gray-600 leading-relaxed border-t border-coffee/5 pt-3">
+                        Anda dapat melihat daftar menu unggulan sampel di bagian 'Menu' pada website ini, atau langsung menghubungi kami via WhatsApp untuk katalog menu terupdate.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 6 -->
+                <div class="border border-coffee/10 rounded-2xl overflow-hidden bg-warmbg/50">
+                    <button onclick="toggleFaq(6)" class="w-full p-5 text-left font-serif font-bold text-coffee-dark flex justify-between items-center focus:outline-none">
+                        <span>Bagaimana cara menghubungi KESAN secara langsung?</span>
+                        <i class="fa-solid fa-chevron-down text-mustard transition-transform duration-300" id="faqIcon-6"></i>
+                    </button>
+                    <div id="faqContent-6" class="hidden px-5 pb-5 text-sm text-gray-600 leading-relaxed border-t border-coffee/5 pt-3">
+                        Anda dapat menghubungi kami melalui formulir di bagian Kontak, pesan WhatsApp resmi, atau mengunjungi langsung outlet KESAN Cafe & Resto pada jam operasional.
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= 12. FOOTER ================= -->
+    <footer class="bg-coffee-dark text-white pt-16 pb-8 border-t border-mustard/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+                
+                <!-- Col 1: Brand Info -->
+                <div class="space-y-4">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-10 h-10 rounded-full border-2 border-mustard flex items-center justify-center bg-coffee">
+                            <span class="font-serif font-bold text-lg text-mustard">K</span>
+                        </div>
+                        <div class="flex flex-col">
+                            <span class="font-serif text-2xl font-bold tracking-wider text-white">KESAN</span>
+                            <span class="text-[9px] tracking-widest text-mustard uppercase -mt-1">Cafe & Resto</span>
+                        </div>
+                    </div>
+                    <p class="text-xs text-gray-400 leading-relaxed font-sans">
+                        “Affordable Price, Luxurious Taste.”<br>
+                        Tempat berkumpul, menikmati makanan lezat, dan mengukir kenangan manis bersama orang terdekat.
+                    </p>
+                    <div class="flex space-x-3 pt-2">
+                        <a href="#" class="w-8 h-8 rounded-full bg-coffee flex items-center justify-center text-mustard hover:bg-mustard hover:text-white transition-colors" aria-label="Instagram"><i class="fa-brands fa-instagram text-sm"></i></a>
+                        <a href="#" class="w-8 h-8 rounded-full bg-coffee flex items-center justify-center text-mustard hover:bg-mustard hover:text-white transition-colors" aria-label="Facebook"><i class="fa-brands fa-facebook-f text-sm"></i></a>
+                        <a href="#" class="w-8 h-8 rounded-full bg-coffee flex items-center justify-center text-mustard hover:bg-mustard hover:text-white transition-colors" aria-label="TikTok"><i class="fa-brands fa-tiktok text-sm"></i></a>
+                        <a href="#" class="w-8 h-8 rounded-full bg-coffee flex items-center justify-center text-mustard hover:bg-mustard hover:text-white transition-colors" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp text-sm"></i></a>
+                    </div>
+                </div>
+
+                <!-- Col 2: Navigasi Cepat -->
+                <div>
+                    <h4 class="font-serif font-bold text-lg text-mustard mb-4">Navigasi Cepat</h4>
+                    <ul class="space-y-2 text-xs text-gray-300">
+                        <li><a href="#beranda" class="hover:text-mustard transition-colors">Beranda</a></li>
+                        <li><a href="#tentang" class="hover:text-mustard transition-colors">Tentang Kami</a></li>
+                        <li><a href="#menu" class="hover:text-mustard transition-colors">Daftar Menu Sampel</a></li>
+                        <li><a href="#fasilitas" class="hover:text-mustard transition-colors">Fasilitas Resto</a></li>
+                        <li><a href="#galeri" class="hover:text-mustard transition-colors">Galeri Foto</a></li>
+                        <li><a href="#reservasi" class="hover:text-mustard transition-colors">Reservasi Acara</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: Informasi Operasional -->
+                <div>
+                    <h4 class="font-serif font-bold text-lg text-mustard mb-4">Jam Operasional</h4>
+                    <ul class="space-y-2 text-xs text-gray-300">
+                        <li class="flex justify-between border-b border-white/5 pb-1">
+                            <span>Senin - Kamis:</span>
+                            <span class="text-amber-200">10:00 - 22:00</span>
+                        </li>
+                        <li class="flex justify-between border-b border-white/5 pb-1">
+                            <span>Jumat - Sabtu:</span>
+                            <span class="text-amber-200">10:00 - 23:00</span>
+                        </li>
+                        <li class="flex justify-between border-b border-white/5 pb-1">
+                            <span>Minggu:</span>
+                            <span class="text-amber-200">10:00 - 22:00</span>
+                        </li>
+                        <li class="pt-2 text-mustard italic">
+                            *Live Music setiap Jumat & Sabtu Malam
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Col 4: Kontak Resmi -->
+                <div>
+                    <h4 class="font-serif font-bold text-lg text-mustard mb-4">Hubungi Kami</h4>
+                    <p class="text-xs text-gray-300 mb-2"><i class="fa-solid fa-location-dot text-mustard mr-2"></i> Pusat Kota (Alamat Resmi Placeholder)</p>
+                    <p class="text-xs text-gray-300 mb-2"><i class="fa-solid fa-phone text-mustard mr-2"></i> +62 812-XXXX-XXXX</p>
+                    <p class="text-xs text-gray-300 mb-4"><i class="fa-solid fa-envelope text-mustard mr-2"></i> info@kesancafe.com</p>
+                    <a href="#kontak" class="inline-block text-xs bg-mustard hover:bg-mustard-hover text-white px-4 py-2 rounded-lg font-medium transition-colors">
+                        Kirim Pesan Direct
+                    </a>
+                </div>
+
+            </div>
+
+            <!-- Bottom Copyright & Policies -->
+            <div class="pt-8 border-t border-white/10 flex flex-col sm:flex-row justify-between items-center text-xs text-gray-400 gap-4">
+                <p>&copy; <span id="currentYear"></span> KESAN Cafe & Resto. Hak Cipta Dilindungi Undang-Undang.</p>
+                <div class="flex space-x-6">
+                    <a href="#" onclick="alert('Kebijakan Privasi KESAN: Seluruh data pribadi dikelola dengan kerahasiaan tinggi.')" class="hover:text-mustard">Kebijakan Privasi</a>
+                    <a href="#" onclick="alert('Syarat & Ketentuan Layanan KESAN Cafe & Resto.')" class="hover:text-mustard">Syarat & Ketentuan</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Floating Button -->
+    <button id="backToTop" onclick="scrollToTop()" class="fixed bottom-6 right-6 z-40 w-12 h-12 rounded-full bg-mustard text-white shadow-xl flex items-center justify-center opacity-0 pointer-events-none transition-all duration-300 hover:bg-mustard-hover focus:outline-none">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- ================= JAVASCRIPT LOGIC ================= -->
+    <script>
+        // Set dynamic copyright year
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const menuIcon = document.getElementById('menuIcon');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            if (mobileMenu.classList.contains('hidden')) {
+                menuIcon.classList.remove('fa-xmark');
+                menuIcon.classList.add('fa-bars');
+            } else {
+                menuIcon.classList.remove('fa-bars');
+                menuIcon.classList.add('fa-xmark');
+            }
+        });
+
+        // Close mobile drawer when link clicked
+        document.querySelectorAll('.mobile-link').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                menuIcon.classList.remove('fa-xmark');
+                menuIcon.classList.add('fa-bars');
+            });
+        });
+
+        // Back to top & Header style on scroll
+        const backToTopBtn = document.getElementById('backToTop');
+        const mainHeader = document.getElementById('mainHeader');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTopBtn.classList.remove('opacity-0', 'pointer-events-none');
+                backToTopBtn.classList.add('opacity-100');
+                mainHeader.classList.add('shadow-xl');
+            } else {
+                backToTopBtn.classList.add('opacity-0', 'pointer-events-none');
+                backToTopBtn.classList.remove('opacity-100');
+                mainHeader.classList.remove('shadow-xl');
+            }
+        });
+
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+
+        // Full Menu Modal Control & Filtering
+        function openMenuModal() {
+            const modal = document.getElementById('fullMenuModal');
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeMenuModal() {
+            const modal = document.getElementById('fullMenuModal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+            document.body.style.overflow = 'auto';
+        }
+
+        function filterMenuCategory(category, btnElement) {
+            // Update Tab Active Style
+            document.querySelectorAll('.menu-tab-btn').forEach(btn => {
+                btn.classList.remove('bg-mustard', 'text-white');
+                btn.classList.add('bg-coffee/5', 'text-coffee-dark');
+            });
+            btnElement.classList.remove('bg-coffee/5', 'text-coffee-dark');
+            btnElement.classList.add('bg-mustard', 'text-white');
+
+            // Filter Items
+            const items = document.querySelectorAll('.menu-item-card');
+            items.forEach(item => {
+                if (category === 'all' || item.classList.contains(category)) {
+                    item.classList.remove('hidden');
+                    item.classList.add('flex');
+                } else {
+                    item.classList.add('hidden');
+                    item.classList.remove('flex');
+                }
+            });
+        }
+
+        // Gallery Lightbox Functions
+        function openLightbox(imgSrc, caption) {
+            const modal = document.getElementById('lightboxModal');
+            const img = document.getElementById('lightboxImg');
+            const cap = document.getElementById('lightboxCaption');
+
+            img.src = imgSrc;
+            cap.textContent = caption;
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            const modal = document.getElementById('lightboxModal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+            document.body.style.overflow = 'auto';
+        }
+
+        // FAQ Accordion Toggle
+        function toggleFaq(id) {
+            const content = document.getElementById(`faqContent-${id}`);
+            const icon = document.getElementById(`faqIcon-${id}`);
+
+            if (content.classList.contains('hidden')) {
+                content.classList.remove('hidden');
+                icon.classList.add('rotate-180');
+            } else {
+                content.classList.add('hidden');
+                icon.classList.remove('rotate-180');
+            }
+        }
+
+        // Conditional reservation fields in form
+        function toggleReservationFields() {
+            const type = document.getElementById('needType').value;
+            const resFields = document.getElementById('reservationFields');
+
+            if (type === 'Reservasi Grup' || type === 'Acara Spesial') {
+                resFields.classList.remove('hidden');
+                resFields.classList.add('grid');
+            } else {
+                resFields.classList.add('hidden');
+                resFields.classList.remove('grid');
+            }
+        }
+
+        // Contact Form Handling (Demo Backend Interactivity)
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            
+            const submitBtn = document.getElementById('submitBtn');
+            const btnText = document.getElementById('btnText');
+            const feedback = document.getElementById('formFeedback');
+            const demoNotice = document.getElementById('demoNotice');
+
+            // Show Loading state
+            btnText.textContent = 'Memproses Pesan...';
+            submitBtn.disabled = true;
+            submitBtn.classList.add('opacity-75');
+
+            setTimeout(() => {
+                // Reset button state
+                btnText.textContent = 'Kirim Pesan Sekarang';
+                submitBtn.disabled = false;
+                submitBtn.classList.remove('opacity-75');
+
+                // Display success message
+                feedback.classList.remove('hidden', 'bg-red-100', 'text-red-700');
+                feedback.classList.add('bg-green-100', 'text-green-800', 'border', 'border-green-300');
+                feedback.innerHTML = `<i class="fa-solid fa-circle-check text-green-600 mr-2"></i> Terima kasih! Pesan Anda telah berhasil diproses dalam mode demo. Tim KESAN akan segera menghubungi Anda.`;
+
+                demoNotice.classList.remove('hidden');
+
+                // Reset Form
+                document.getElementById('contactForm').reset();
+                document.getElementById('reservationFields').classList.add('hidden');
+
+                // Auto hide message after 8 seconds
+                setTimeout(() => {
+                    feedback.classList.add('hidden');
+                }, 8000);
+
+            }, 1200);
+        }
+    </script>
+</body>
+</html>
